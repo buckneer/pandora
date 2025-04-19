@@ -22,10 +22,10 @@ function HamburgerMenu() {
         isOpen && (
           <>
             <div 
-              className="w-[100vw] h-[100vh] absolute z-1 top-0 left-0 bg-black opacity-50 overflow-none"
+              className="w-[100vw] h-[100vh] absolute z-[9998] top-0 left-0 bg-black opacity-50 overflow-none "
               onClick={() => setIsOpen(false)} 
             />
-            <nav className="absolute flex flex-col bg-white w-[90vw] h-[calc(100vh-48px)] top-[48px] md:w-[60vw] z-10 overflow-none">
+            <nav className="absolute flex flex-col bg-white w-[90vw] h-[calc(100vh-48px)] top-[48px] md:w-[60vw] z-[9999] overflow-none">
               {
                 navbar.links.map((link, index) => (
                   <Link 
@@ -41,7 +41,7 @@ function HamburgerMenu() {
           </>
         )
       }
-      <div className="relative z-10 flex flex-1 items-center justify-between px-4 bg-white">
+      <div className="relative z-[9999] flex flex-1 items-center justify-between px-4 bg-white">
         <img className="w-12 h-12" src="/pmf.png" />
         {
           isOpen 

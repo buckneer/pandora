@@ -9,11 +9,11 @@ const navbar: Navbar = {
       icon: RiFacebookBoxFill,
     },
     {
-      url: 'https://www.youtube.com/channel/UC_KQqQ8vGfSoTUKZ2-LtmQQ',
+      url: 'https://www.instagram.com/pmfkm028/',
       icon: RiInstagramFill,
     },
     {
-      url: 'https://www.instagram.com/pmfkm028/',
+      url: 'https://www.youtube.com/channel/UC_KQqQ8vGfSoTUKZ2-LtmQQ',
       icon: RiYoutubeFill
     },
   ],
