@@ -1,11 +1,11 @@
-
+import navbar from "../../../data/nav/navbar";
 
 function RegularMenu() {
-    return (
-        <div>
-            <h1>Regular</h1>
-        </div>
-    );
+  return (
+    <nav>
+      
+    </nav>
+  );
 }
 
 export default RegularMenu;
