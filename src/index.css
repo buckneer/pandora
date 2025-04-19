@@ -1,15 +1,23 @@
 @import "tailwindcss";
 
-
-
 @layer components {
+  .bottom-shadow {
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
+  }
+  .top-shadow {
+    box-shadow: 0px -5px 10px 0px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px -5px 10px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px -5px 10px 0px rgba(0,0,0,0.1);
+  }
   .bg-hero-overlay {
-      background-image: 
-          linear-gradient(180deg, rgba(39, 41, 43, .4), rgba(39, 41, 43, 0)),
-          linear-gradient(0deg, rgba(25, 19, 19, .29), rgba(25, 19, 19, .26) 20%, rgba(25, 20, 20, 0) 58%),
-          linear-gradient(90deg, rgba(25, 19, 19, .24), rgba(25, 19, 19, .14) 14%, rgba(25, 20, 20, 0) 49%),
-          linear-gradient(90deg, #27292b 0, rgba(39, 41, 43, 0) 50%);
-      background-size: cover;
-      background-position: center;
+    background-image: 
+      linear-gradient(180deg, rgba(39, 41, 43, .4), rgba(39, 41, 43, 0)),
+      linear-gradient(0deg, rgba(25, 19, 19, .29), rgba(25, 19, 19, .26) 20%, rgba(25, 20, 20, 0) 58%),
+      linear-gradient(90deg, rgba(25, 19, 19, .24), rgba(25, 19, 19, .14) 14%, rgba(25, 20, 20, 0) 49%),
+      linear-gradient(90deg, #27292b 0, rgba(39, 41, 43, 0) 50%);
+    background-size: cover;
+    background-position: center;
   }
 }

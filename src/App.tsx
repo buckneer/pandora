@@ -4,20 +4,25 @@ import Uni from "./pages/Uni"
 import Departments from "./pages/Departments"
 import Navbar from "./components/common/Navbar"
 import Footer from "./components/common/Footer"
+import { LanguageProvider } from "./context/LanguageContext"
 
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Projects />} />
-          <Route path="/uni" element={<Uni />} />
-          <Route path="/deps" element={<Departments />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <LanguageProvider>
+        <BrowserRouter>
+          <Navbar />
+          <div className="py-4">
+            <Routes>
+              <Route path="/" element={<Projects />} />
+              <Route path="/uni" element={<Uni />} />
+              <Route path="/deps" element={<Departments />} />
+            </Routes>
+          </div>
+          <Footer />
+        </BrowserRouter>
+      </LanguageProvider>
     </>
   )
 }
