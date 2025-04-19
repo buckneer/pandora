@@ -7,21 +7,19 @@ import Footer from "./components/common/Footer"
 
 
 function App() {
-
-
-	return (
-		<>
-			<BrowserRouter>
-				<Navbar />
-				<Routes>
-					<Route path="/" element={<Projects />} />
-					<Route path="/uni" element={<Uni />} />
-					<Route path="/deps" element={<Departments />} />
-				</Routes>
-				<Footer />
-			</BrowserRouter>
-		</>
-	)
+  return (
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Projects />} />
+          <Route path="/uni" element={<Uni />} />
+          <Route path="/deps" element={<Departments />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </>
+  )
 }
 
-export default App
+export default App;
