@@ -13,13 +13,11 @@ function App() {
       <LanguageProvider>
         <BrowserRouter>
           <Navbar />
-          <div className="py-4">
-            <Routes>
-              <Route path="/" element={<Projects />} />
-              <Route path="/uni" element={<Uni />} />
-              <Route path="/deps" element={<Departments />} />
-            </Routes>
-          </div>
+          <Routes>
+            <Route path="/" element={<Projects />} />
+            <Route path="/uni" element={<Uni />} />
+            <Route path="/deps" element={<Departments />} />
+          </Routes>
           <Footer />
         </BrowserRouter>
       </LanguageProvider>

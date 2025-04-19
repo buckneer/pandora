@@ -3,6 +3,7 @@ import { Hero as HeroInterface } from "../../../types/data.types"
 // @ts-ignore
 import { useWidth } from "../../../hooks/useWidth"
 import { Link } from "react-router-dom"
+import TranslatedText from "../TranslatedText/TranslatedText"
 
 const Hero: React.FC<HeroInterface> = (props) => {
   const { backgroundImage, mobileImage, title, subtitle, buttonText, buttonUrl } = props
@@ -21,18 +22,22 @@ const Hero: React.FC<HeroInterface> = (props) => {
 
         <div className="flex-1">
           <div className="max-w-[700px] md:pl-15">
-            <h1 className="text-4xl leading-snug font-bold">{title.cir}</h1>
+            <h1 className="text-4xl leading-snug font-bold">
+              <TranslatedText text={title} />
+            </h1>
           </div>
 
           <div className="max-w-[900px] md:pl-15 md:pt-[30px]">
-            <p className="text-lg opacity-60">Similique rerum iure adipisci molestiae consectetur in deleniti, inventore non quod porro neque pariatur quos ipsam illum natus quam officia ab laborum? Necessitatibus, deserunt! Saepe laudantium, maxime ut doloribus perspiciatis, eveniet reiciendis cupiditate hic fuga quod repellendus harum ipsam non. Magni voluptas dolorem illum, explicabo necessitatibus fuga molestiae quo! Delectus, eligendi deserunt perspiciatis quaerat maxime odio at praesentium nulla? Architecto, fugiat facere.</p>
+            <p className="text-lg opacity-60">
+              <TranslatedText text={subtitle} />
+            </p>
           </div>
         </div>
         
         <div className="flex justify-end self-end px-40 py-20">
-          <Link to={buttonUrl} className="rounded-4xl px-12 py-4 bg-red-500 text-2xl hover:cursor-pointer hover:opacity-90">
-            {buttonText.cir} &#8594;
-          </Link>
+          <a href={buttonUrl} target="_blank" className="rounded-4xl px-12 py-4 bg-red-500 text-2xl hover:cursor-pointer hover:opacity-90">
+            <TranslatedText text={buttonText} /> &#8594;
+          </a>
         </div>
       </div>
     </div>
