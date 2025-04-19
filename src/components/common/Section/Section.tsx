@@ -39,7 +39,9 @@ const Section: React.FC<ISection> = ({
 
   return (
     <section id={getTranslatedString(title, selectedLanguage)}>
-      <h2 className="text-2xl"><TranslatedText text={title} /></h2>
+      <h2 className="text-2xl">
+        <TranslatedText text={title} />
+      </h2>
       <div>
         { content }
       </div>

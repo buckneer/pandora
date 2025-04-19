@@ -12,6 +12,7 @@
   "dependencies": {
     "@remixicon/react": "^4.6.0",
     "@tailwindcss/vite": "^4.1.4",
+    "aos": "^2.3.4",
     "clsx": "^2.1.1",
     "firebase": "^11.6.0",
     "react": "^19.0.0",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
+    "@types/aos": "^3.0.7",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",

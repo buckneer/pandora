@@ -5,11 +5,13 @@ import Departments from "./pages/Departments"
 import Navbar from "./components/common/Navbar"
 import Footer from "./components/common/Footer"
 import { LanguageProvider } from "./context/LanguageContext"
+import AOSInit from "./components/AOSInit"
 
 
 function App() {
   return (
     <>
+      <AOSInit />
       <LanguageProvider>
         <BrowserRouter>
           <Navbar />
