@@ -1,4 +1,10 @@
+export type Language = 'lat' | 'cir';
+
 export type Translatable = {
-  lat: string;
-  cir: string;
+  [lang in Language]: string;
+}
+
+export type Image = {
+  src: string;
+  alt: Translatable;
 }
