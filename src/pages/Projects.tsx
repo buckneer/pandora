@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import TranslatedText from "../components/common/TranslatedText/TranslatedText";
 import projects from '../data/pages/projects';
+import Card from "../components/common/Project/Card";
 
 function Projects() {
   const [ selectedCategory, setSelectedCategory ] = useState<number | null>(null);
@@ -25,6 +26,11 @@ function Projects() {
       <p>
         <TranslatedText text={projects.subtitle} />
       </p>
+      {
+        projects.projects.map((project, index) => (
+          <Card {...project} key={index} />
+        ))
+      }
       
     </div>
   );

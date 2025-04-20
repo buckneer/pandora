@@ -18,6 +18,7 @@ export type Project = {
   author: Translatable;
   subject: Translatable;
   category: number;
+  title: Translatable;
   technologies: string; // this is not translatable
   backgroundImage: string;
   // etc...
