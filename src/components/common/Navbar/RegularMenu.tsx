@@ -23,7 +23,7 @@ function RegularMenu() {
       <div className="flex flex-1 justify-center gap-6">
         {
           navbar.links.map((link, index) => (
-            <Link to={link.url} key={index} className={clsx(location.pathname === link.url && 'font-bold')}>
+            <Link to={link.url} key={index} className={clsx('hover:text-red-500 transition-colors', location.pathname === link.url && 'font-bold text-red-500')}>
               <TranslatedText text={link.label} />
             </Link>
           ))
@@ -33,7 +33,7 @@ function RegularMenu() {
         {
           navbar.socials.map(({ icon: Icon, url }, index) => (
             <a href={url} target="_blank" key={index}>
-              <Icon size={18} />
+              <Icon size={18}  />
             </a>
           ))
         }

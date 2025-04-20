@@ -1,6 +1,6 @@
 import { DepartmentPage, ISection } from "../../types/data.types";
 
-const sections: ISection[] = [
+const informaticsSections: ISection[] = [
   {
     title: {
       cir: 'Текст и слика',
@@ -76,6 +76,13 @@ const sections: ISection[] = [
   },
 ];
 
+const mathematicsSections: ISection[] = [];
+const geographySections: ISection[] = [];
+const physicsSections: ISection[] = [];
+const chemistrySections: ISection[] = [];
+const biologoySections: ISection[] = [];
+
+
 const departments: DepartmentPage = {
   title: {
     cir: 'Одсеци',
@@ -85,7 +92,74 @@ const departments: DepartmentPage = {
     cir: 'Опис на ћирилици',
     lat: 'Opis na latinic'
   },
-  sections
+  departments: [
+    {
+      title: {
+        cir: 'Информатика',
+        lat: 'Informatika'
+      },
+      subtitle: {
+        cir: 'Опис на ћирилици',
+        lat: 'Opis na latinic'
+      },
+      sections: informaticsSections
+    },
+    {
+      title: {
+        cir: 'Математика',
+        lat: 'Matematika'
+      },
+      subtitle: {
+        cir: 'Опис на ћирилици',
+        lat: 'Opis na latinic'
+      },
+      sections: mathematicsSections
+    },
+    {
+      title: {
+        cir: 'Физика',
+        lat: 'Fizika'
+      },
+      subtitle: {
+        cir: 'Опис на ћирилици',
+        lat: 'Opis na latinic'
+      },
+      sections: physicsSections
+    },
+    {
+      title: {
+        cir: 'Хемија',
+        lat: 'Hemija'
+      },
+      subtitle: {
+        cir: 'Опис на ћирилици',
+        lat: 'Opis na latinic'
+      },
+      sections: chemistrySections
+    },
+    {
+      title: {
+        cir: 'Биологија',
+        lat: 'Biologija'
+      },
+      subtitle: {
+        cir: 'Опис на ћирилици',
+        lat: 'Opis na latinic'
+      },
+      sections: biologoySections
+    },
+    {
+      title: {
+        cir: 'Географија',
+        lat: 'Geografija'
+      },
+      subtitle: {
+        cir: 'Опис на ћирилици',
+        lat: 'Opis na latinic'
+      },
+      sections: geographySections
+    },
+  ]
 };
 
 

@@ -8,3 +8,17 @@ export type Image = {
   src: string;
   alt: Translatable;
 }
+
+export type ProjectCategory = {
+  id: number;
+  title: Translatable;
+}
+
+export type Project = {
+  author: Translatable;
+  subject: Translatable;
+  category: number;
+  technologies: string; // this is not translatable
+  backgroundImage: string;
+  // etc...
+}

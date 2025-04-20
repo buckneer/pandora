@@ -22,11 +22,16 @@ const Section: React.FC<ISection> = ({
       content = (image as Image[]).map((image, index) => (
         <img key={index} src={image.src} alt={getTranslatedString(image.alt, selectedLanguage)} />
       ));
+      content = (
+        <div className="flex gap-4 flex-wrap">
+          { content }
+        </div>
+      )
       break;
 
     case 'text-image':
       content = (
-        <div className={clsx('flex flex-1 gap-4', inverse && 'flex-row-reverse')}>
+        <div className={clsx('flex flex-1 gap-8', inverse && 'flex-row-reverse')}>
           <p className="flex-1"><TranslatedText text={text!} /></p>
           <img src={(image as Image).src} alt={getTranslatedString((image as Image).alt, selectedLanguage)} />
         </div>
@@ -39,9 +44,9 @@ const Section: React.FC<ISection> = ({
 
   return (
     <section id={getTranslatedString(title, selectedLanguage)}>
-      <h2 className="text-2xl">
+      <h3 className="text-2xl mt-4 mb-2">
         <TranslatedText text={title} />
-      </h2>
+      </h3>
       <div>
         { content }
       </div>

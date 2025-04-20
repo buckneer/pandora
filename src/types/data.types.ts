@@ -1,4 +1,4 @@
-import { Image, Translatable } from "./types";
+import { Image, Project, ProjectCategory, Translatable } from "./types";
 import type { RemixiconComponentType } from "@remixicon/react";
 
 
@@ -35,10 +35,16 @@ export interface Hero {
 export interface DepartmentPage {
   title: Translatable;
   subtitle: Translatable;
-  sections: ISection[];
+  departments: IDepartment[];
 }
 
 export type SectionType = 'text-image' | 'text' | 'images';
+
+export interface IDepartment {
+  title: Translatable;
+  subtitle?: Translatable;
+  sections: ISection[];
+}
 
 export interface ISection {
   type: SectionType;
@@ -46,4 +52,11 @@ export interface ISection {
   title: Translatable;
   text?: Translatable;
   image?: Image | Image[];
+}
+
+export interface ProjectPage {
+  title: Translatable;
+  subtitle: Translatable;
+  categories: ProjectCategory[];
+  projects: Project[];
 }
