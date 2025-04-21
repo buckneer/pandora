@@ -60,7 +60,7 @@ const graphicsProjects: Project[] = [
     },
     ...graphicsMetadata,
     technologies: 'Adobe Photoshop',
-    backgroundImage: '/photoshop/obil-ic.jpg'
+    backgroundImage: '/photoshop/obilic.jpg'
   },
   {
     title: {
@@ -74,6 +74,32 @@ const graphicsProjects: Project[] = [
     ...graphicsMetadata,
     technologies: 'CorelDRAW',
     backgroundImage: '/corel/pmf.jpg'
+  },
+  {
+    title: {
+      cir: 'Шминка',
+      lat: 'Šminka'
+    },
+    author: {
+      cir: 'Васић Николија',
+      lat: 'Vasić Nikolija'
+    },
+    ...graphicsMetadata,
+    technologies: 'CorelDRAW',
+    backgroundImage: '/corel/sminka.jpg'
+  },
+  {
+    title: {
+      cir: 'Иницијали',
+      lat: 'Inicijali'
+    },
+    author: {
+      cir: 'Јаковљевић Јована',
+      lat: 'Jakovljević Jovana'
+    },
+    ...graphicsMetadata,
+    technologies: 'CorelDRAW',
+    backgroundImage: '/corel/inicijali.jpg'
   },
 ];
 
