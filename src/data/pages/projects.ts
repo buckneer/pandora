@@ -49,6 +49,32 @@ const graphicsProjects: Project[] = [
     technologies: 'Adobe Photoshop',
     backgroundImage: '/photoshop/woman.jpg'
   },
+  {
+    title: {
+      cir: 'Електрана Обилић',
+      lat: 'Elektrana Obilić'
+    },
+    author: {
+      cir: 'Шобот Анђела',
+      lat: 'Šobot Andjela'
+    },
+    ...graphicsMetadata,
+    technologies: 'Adobe Photoshop',
+    backgroundImage: '/photoshop/obil-ic.jpg'
+  },
+  {
+    title: {
+      cir: 'ПМФ спортски лого',
+      lat: 'PMF sportski logo'
+    },
+    author: {
+      cir: 'Исаиловић Јован',
+      lat: 'Isailović Jovan'
+    },
+    ...graphicsMetadata,
+    technologies: 'CorelDRAW',
+    backgroundImage: '/corel/pmf.jpg'
+  },
 ];
 
 
@@ -60,6 +86,7 @@ const webProgrammingMetadata = {
   category: 1,
 }
 
+// TODO: change this...
 const webProgrammingProjects: Project[] = [
   {
     ...webProgrammingMetadata,
