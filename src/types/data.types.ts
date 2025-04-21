@@ -60,3 +60,17 @@ export interface ProjectPage {
   categories: ProjectCategory[];
   projects: Project[];
 }
+
+export interface FooterData {
+  phoneNumber: Translatable;
+  fax: Translatable;
+  email: Translatable;
+  address: Translatable;
+  socials: NavbarSocial[];
+  pib: Translatable;
+  account: Translatable;
+  number: Translatable;
+
+  footerString: Translatable
+}
+
