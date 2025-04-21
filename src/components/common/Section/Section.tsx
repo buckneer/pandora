@@ -15,12 +15,12 @@ const Section: React.FC<ISection> = ({
 
   switch (type) {
     case 'text': 
-      content = <p><TranslatedText text={text!} /></p>
+      content = <div className="flex flex-col gap-4 text-justify" dangerouslySetInnerHTML={{ __html: getTranslatedString(text!, selectedLanguage) }} />
       break;
 
     case 'images':
       content = (image as Image[]).map((image, index) => (
-        <img key={index} src={image.src} alt={getTranslatedString(image.alt, selectedLanguage)} />
+        <img key={index} src={image.src} alt={image?.alt ? getTranslatedString(image.alt, selectedLanguage) : ''} />
       ));
       content = (
         <div className="flex gap-4 flex-wrap">
@@ -31,9 +31,9 @@ const Section: React.FC<ISection> = ({
 
     case 'text-image':
       content = (
-        <div className={clsx('flex flex-1 gap-8', inverse && 'flex-row-reverse')}>
-          <p className="flex-1"><TranslatedText text={text!} /></p>
-          <img src={(image as Image).src} alt={getTranslatedString((image as Image).alt, selectedLanguage)} />
+        <div className={clsx('flex flex-1 gap-8 flex-wrap lg:flex-nowrap', inverse && 'flex-row-reverse')}>
+          <p className="w-full lg:w-2/3 text-justify" dangerouslySetInnerHTML={{ __html: getTranslatedString(text!, selectedLanguage) }} />
+          <img className="w-full lg:w-1/3" src={(image as Image).src} alt={(image as Image)?.alt ? getTranslatedString((image as Image).alt!, selectedLanguage) : ''} />
         </div>
       );
       break;
@@ -43,10 +43,15 @@ const Section: React.FC<ISection> = ({
   }
 
   return (
-    <section id={getTranslatedString(title, selectedLanguage)}>
-      <h3 className="text-2xl mt-4 mb-2">
-        <TranslatedText text={title} />
-      </h3>
+    <section id={title ? getTranslatedString(title, selectedLanguage) : 'Sekcija'}>
+      {
+        title && (
+          <h3 className="text-2xl mt-4 mb-2">
+            <TranslatedText text={title} />
+          </h3>
+        )
+      }
+      
       <div>
         { content }
       </div>

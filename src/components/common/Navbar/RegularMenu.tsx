@@ -32,8 +32,8 @@ function RegularMenu() {
       <div className="flex gap-6 w-[240px]">
         {
           navbar.socials.map(({ icon: Icon, url }, index) => (
-            <a href={url} target="_blank" key={index}>
-              <Icon size={18}  />
+            <a className="text-gray-600 hover:text-black transition-colors" href={url} target="_blank" key={index}>
+              <Icon className="w-6 h-6"  />
             </a>
           ))
         }

@@ -57,8 +57,12 @@ export interface ISection {
 export interface ProjectPage {
   title: Translatable;
   subtitle: Translatable;
-  categories: ProjectCategory[];
   projects: Project[];
+}
+
+export interface UniversityPage {
+  hero: Hero;
+  sections: Partial<ISection>[];
 }
 
 export interface FooterData {
@@ -71,6 +75,7 @@ export interface FooterData {
   account: Translatable;
   number: Translatable;
 
-  footerString: Translatable
+  footerCreatedBy: Translatable;
+  footerString: Translatable;
 }
 

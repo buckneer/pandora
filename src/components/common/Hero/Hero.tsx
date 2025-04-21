@@ -25,7 +25,7 @@ const Hero: React.FC<HeroInterface> = (props) => {
 
         <div className="flex-0 lg:flex-1 px-4 lg:px-0">
           <div className="lg:max-w-[700px] md:pl-15">
-            <h1 className="text-4xl leading-snug font-bold" data-aos="fade-left">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl leading-snug font-bold" data-aos="fade-left">
               <TranslatedText text={title} />
             </h1>
           </div>

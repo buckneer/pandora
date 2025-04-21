@@ -1,4 +1,5 @@
 import { footer } from "../../../data/nav/footer";
+import TranslatedText from '../TranslatedText/TranslatedText';
 
 function Footer() {
   return (
@@ -6,17 +7,31 @@ function Footer() {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Column 1: Contact Info */}
         <div className="space-y-1">
-          <p>{footer.phoneNumber.lat}</p>
-          <p>{footer.fax.lat}</p>
-          <p>{footer.email.lat}</p>
-          <p>{footer.address.lat}</p>
+          <p>
+            <TranslatedText text={footer.phoneNumber} />
+          </p>
+          <p>
+            <TranslatedText text={footer.fax} />
+          </p>
+          <p>
+            <TranslatedText text={footer.email} />
+          </p>
+          <p>
+            <TranslatedText text={footer.address} />
+          </p>
         </div>
 
         {/* Column 2: Legal Info */}
         <div className="space-y-1">
-          <p>{footer.pib.lat}</p>
-          <p>{footer.number.lat}</p>
-          <p>{footer.account.lat}</p>
+          <p>
+            <TranslatedText text={footer.pib} />
+          </p>
+          <p>
+            <TranslatedText text={footer.number} />
+          </p>
+          <p>
+            <TranslatedText text={footer.account} />
+          </p>
         </div>
 
         {/* Column 3: Socials and Footer Text */}
@@ -35,7 +50,10 @@ function Footer() {
             ))}
           </div>
           <p className="text-xs text-gray-500 text-center md:text-right">
-            {footer.footerString.lat}
+            <TranslatedText text={footer.footerString} />
+          </p>
+          <p className="text-xs text-gray-500 text-center md:text-right">
+            <TranslatedText text={footer.footerCreatedBy} />
           </p>
         </div>
       </div>

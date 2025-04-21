@@ -47,5 +47,9 @@ export const footer: FooterData = {
     footerString: {
         lat: "© 2025 Prirodno-matematički fakultet. Sva prava zadržana.",
         cir: "© 2025 Природно-математички факултет. Сва права задржана."
+    },
+    footerCreatedBy: {
+      cir: 'Мифтари Симел, Исаиловић Јован и Лазаревић Немања',
+      lat: 'Miftari Simel, Isailović Jovan i Lazarević Nemanja',
     }
 }

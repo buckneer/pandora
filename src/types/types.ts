@@ -6,7 +6,7 @@ export type Translatable = {
 
 export type Image = {
   src: string;
-  alt: Translatable;
+  alt?: Translatable;
 }
 
 export type ProjectCategory = {
