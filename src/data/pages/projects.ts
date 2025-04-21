@@ -64,6 +64,19 @@ const graphicsProjects: Project[] = [
   },
   {
     title: {
+      cir: 'Црква Св. Димитрија',
+      lat: 'Crkva Sv. Dimitrija'
+    },
+    author: {
+      cir: 'Драговић Ања',
+      lat: 'Dragović Anja'
+    },
+    ...graphicsMetadata,
+    technologies: 'Adobe Photoshop',
+    backgroundImage: '/photoshop/crkva.jpg'
+  },
+  {
+    title: {
       cir: 'ПМФ спортски лого',
       lat: 'PMF sportski logo'
     },
