@@ -2,39 +2,56 @@ import React, { useState } from 'react';
 import { Project, Translatable } from '../../../types/types';
 import TranslatedText from '../TranslatedText/TranslatedText';
 import Lightbox from 'yet-another-react-lightbox';
-
 import "yet-another-react-lightbox/styles.css";
 import { Fullscreen, Slideshow, Zoom } from 'yet-another-react-lightbox/plugins';
+import ShareCadModal from '../ShareCadModal/ShareCadModal';
 
 const viewText: Translatable = {
   cir: 'Погледај пројекат',
   lat: 'Pogledaj projekat'
 };
 
+// Technology groups
+const lightBoxTechs = ['Adobe Photoshop', 'CorelDRAW'];
+const modalTechs = ['AutoCAD'];
+const webTechs = ['Laravel', 'React', 'Vue', 'Angular', 'PHP'];
+
 const Card: React.FC<Project> = ({
   author,
   title,
   subject,
   backgroundImage,
-  category,
-  technologies
+  technologies,
+  url
 }) => {
-  const [ lightBoxOpen, setLightBoxOpen ] = useState<boolean>(false);
+  const [lightBoxOpen, setLightBoxOpen] = useState<boolean>(false);
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
 
+  // Normalize techs
   const techList = Array.isArray(technologies)
     ? technologies
     : technologies.split(/,\s*/);
-  
+
+  const isLightboxable = techList.some(tech => lightBoxTechs.includes(tech));
+  const isModalable = techList.some(tech => modalTechs.includes(tech));
+  const isWeb = techList.some(tech => webTechs.includes(tech)) && !!url;
+
   const handleClick = () => {
-    if (category === 3) {
+    if (isLightboxable) {
       setLightBoxOpen(true);
+    } else if (isModalable) {
+      setModalOpen(true);
+    } else if (isWeb && url) {
+      window.open(url, '_blank');
     }
-  }
+  };
+
+  // Disable if no handler
+  const isDisabled = !(isLightboxable || isModalable || isWeb);
 
   return (
     <>
       <div className="mx-auto relative group w-full max-w-sm bg-white rounded-2xl shadow-md ring-1 ring-gray-200 overflow-hidden transition-transform transform hover:scale-105">
-        {/* Accent bar */}
         <div className="absolute top-0 left-0 w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500" />
 
         <div className="relative h-48 overflow-hidden">
@@ -44,7 +61,6 @@ const Card: React.FC<Project> = ({
             className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
           />
 
-          {/* Glassy overlay */}
           <div className="absolute inset-0 bg-black/50 bg-opacity-20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6">
             <div className="flex flex-wrap gap-2 mb-4">
               {techList.map((tech, idx) => (
@@ -56,9 +72,10 @@ const Card: React.FC<Project> = ({
                 </span>
               ))}
             </div>
-            <button 
+            <button
               onClick={handleClick}
-              className="cursor-pointer bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-semibold px-5 py-2 rounded-full shadow-lg hover:opacity-90 transition-opacity duration-200"
+              className={`cursor-pointer bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-semibold px-5 py-2 rounded-full shadow-lg hover:opacity-90 transition-opacity duration-200 ${isDisabled ? 'opacity-50 cursor-default' : ''}`}
+              disabled={isDisabled}
             >
               <TranslatedText text={viewText} />
             </button>
@@ -77,29 +94,28 @@ const Card: React.FC<Project> = ({
           </p>
         </div>
       </div>
-      {
-        category === 3 && (
-          <Lightbox 
-            open={lightBoxOpen}
-            close={() => setLightBoxOpen(false)}
-            carousel={{ finite: true }}
-            plugins={[Slideshow, Fullscreen, Zoom]}
-            render={{
-              buttonPrev: () => null,
-              buttonNext: () => null,
-            }}
-            slides={[
-              { src: backgroundImage }
-            ]}
-            zoom={{ 
-              maxZoomPixelRatio: 2, 
-              scrollToZoom: true, 
-              doubleTapDelay: 300,
-              zoomInMultiplier: 1.2
-            }}
-          />
-        )
-      }
+
+      {/* Graphics Lightbox */}
+      {isLightboxable && (
+        <Lightbox
+          open={lightBoxOpen}
+          close={() => setLightBoxOpen(false)}
+          carousel={{ finite: true }}
+          plugins={[Slideshow, Fullscreen, Zoom]}
+          render={{ buttonPrev: () => null, buttonNext: () => null }}
+          slides={[{ src: backgroundImage }]}
+          zoom={{ maxZoomPixelRatio: 2, scrollToZoom: true, doubleTapDelay: 300, zoomInMultiplier: 1.2 }}
+        />
+      )}
+
+      {/* ShareCAD modal */}
+      {isModalable && (
+        <ShareCadModal
+          open={modalOpen}
+          onClose={() => setModalOpen(false)}
+          sharecadUrl={url || backgroundImage}
+        />
+      )}
     </>
   );
 };

@@ -21,5 +21,6 @@ export type Project = {
   title: Translatable;
   technologies: string; // this is not translatable
   backgroundImage: string;
+  url?: string;
   // etc...
 }

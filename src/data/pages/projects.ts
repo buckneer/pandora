@@ -114,6 +114,104 @@ const graphicsProjects: Project[] = [
     technologies: 'CorelDRAW',
     backgroundImage: '/corel/inicijali.jpg'
   },
+  {
+    ...graphicsMetadata,
+    title: {
+      cir: 'Споменик палим рударима у НОБ-у',
+      lat: 'Spomenik palim rudarima u NOB-u'
+    },
+    author: {
+      cir: 'Исаиловић Јован',
+      lat: 'Isailović Jovan'
+    },
+    technologies: 'AutoCAD',
+    backgroundImage: '/autocad/spomenik.png',
+    url: "https://sharecad.org/Viewer/Shared?file=EAAAAGRP76a9OhxUoB6ZJI4iwwNBy3Y2ZmErFxap2GIyNajIskrr338%2bXo3HB4xi2kVgLvr6apXyw1GSUIJchL%2fWK00EZ%2fhKKGpbFtTM6UWisRYdPI0q1p%2bZv6luc4fbeWW7yjAQCp1JygBX%2fIw3dHYVcQ4D43iLOx97cZOJwJ2oELfLweVR2aL03W2eYx8sildw2A%3d%3d"
+  },
+  {
+    ...graphicsMetadata,
+    title: {
+      cir: 'Пикачу',
+      lat: 'Pikaču'
+    },
+    author: {
+      cir: 'Драговић Ања',
+      lat: 'Dragović Anja'
+    },
+    technologies: 'AutoCAD',
+    backgroundImage: '/autocad/pikacu.png',
+    url: "https://sharecad.org/Viewer/Shared?file=EAAAADkj4V96YsVdyXNwL00fJo7Y3o3yreqMAOAtwoYyztgnTsVuaCo5LDtpoZ3fD6QAlNcn%2fTtA%2fOe3J3b%2feRi2ttq7TWTAYqj1PV%2bjnV2Tb6kkVpyO0X8gBAfnT7B6tLMQiaMyby8bZ5bWaREhe29a0Rq2AzW3LF5LNO6FRPYmxnbBQzpqvQnQXymXekQtea0Z3g%3d%3d"
+  },
+  {
+    ...graphicsMetadata,
+    title: {
+      cir: 'Seat',
+      lat: 'Seat'
+    },
+    author: {
+      cir: 'Драговић Ања',
+      lat: 'Dragović Anja'
+    },
+    technologies: 'AutoCAD',
+    backgroundImage: '/autocad/seat.png',
+    url: "https://sharecad.org/Viewer/Shared?file=EAAAAO5taBF%2b4KRPbXWFfJ8r%2bD35aN14zWx3qTGuf7qdNC5KOgVt5YV9i7eLcXeRjTVqiyN4G39LHR0eKSCwGWaQJVGTMK0nSBnppCOJX0EUKue4e8F5OtDXMIbCEiWSvy9ZZBqlpG2fPAb2dTLFxIDv4E9LWqGqYfAx4jl2wg7%2b9rSXvYT7wTH%2f4%2flrL7yj8%2bcwlw%3d%3d"
+  },
+  {
+    ...graphicsMetadata,
+    title: {
+      cir: 'Чаша',
+      lat: 'Čaša'
+    },
+    author: {
+      cir: 'Шобот Анђела',
+      lat: 'Šobot Anđela'
+    },
+    technologies: 'AutoCAD',
+    backgroundImage: '/autocad/casa.png',
+    url: "https://sharecad.org/Viewer/Shared?file=EAAAAMqjOm8gpjxCAEiRM2RT5ZQvo%2fSw8kBJsVyiK9096Hpv48bDcFKq8G096WjkD3rNxL%2fbjBlDuEfns3MbuV9SNw4kh98SeO2J2iVXRt4iIgwyGD5e%2ffqt6u2qPNYjs8C5UaqhzR%2fYuvuxBF16dK7Sp5DGbk74CjwXzehyx%2bkMv4iwKdAHu1U8soR370%2f14WVuaQ%3d%3d"
+  },
+  {
+    ...graphicsMetadata,
+    title: {
+      cir: 'Toyota',
+      lat: 'Toyota'
+    },
+    author: {
+      cir: 'Шобот Анђела',
+      lat: 'Šobot Anđela'
+    },
+    technologies: 'AutoCAD',
+    backgroundImage: '/autocad/toyota.png',
+    url: "https://sharecad.org/Viewer/Shared?file=EAAAABmXnGOp3l5ockK64ciwuW8g7K4OPpWkBpzizH7uwPYTH5pYfNAtH32YvOa2R0gdihbq15lg0zq0%2bpLNClkFyJWgMFVMwV0GXcKRDJIHivrMiXj2izeLMCFW3ohAI4UJIpvPCscgN57%2bo6RF%2bSUM0EZKDfKjaqcgoBoyMBCacH5c0%2fvJtLN9C%2f2R18wZKJb8zA%3d%3d"
+  },
+  {
+    ...graphicsMetadata,
+    title: {
+      cir: 'Клипови',
+      lat: 'Klipovi'
+    },
+    author: {
+      cir: 'Мифтари Симел',
+      lat: 'Miftari Simel'
+    },
+    technologies: 'AutoCAD',
+    backgroundImage: '/autocad/assembly.png',
+    url: "https://sharecad.org/Viewer/Shared?file=EAAAAEfku%2bJZqIXE8XZYGjHYW42BlLaryVPUe%2bA%2fFlKQh9ipIWRmCkTmE9mj6KolImmgxkYqseFLgtYMXlM6d4o6aIlQskx%2fGCpJ3r7RpjpSpdAmS3IlngH8NHRyLoCjqxFyxl0vy4zCfX3dV%2fRTITjZiC5VAdM7e23SvaKceWAsv07sbZR98x9Belp42mmkE%2fRIGA%3d%3d"
+  },
+  {
+    ...graphicsMetadata,
+    title: {
+      cir: 'Сталак за гитаре',
+      lat: 'Stalak za gitare'
+    },
+    author: {
+      cir: 'Мифтари Симел',
+      lat: 'Miftari Simel'
+    },
+    technologies: 'AutoCAD',
+    backgroundImage: '/autocad/guitar.png',
+    url: "https://sharecad.org/Viewer/Shared?file=EAAAAOouym7jr5jwys1X6MSF%2bRL1bIkw6cjpecbn5ZOVRm3hRcGl4OB1pJvTyfOOrQq503%2bvzax8Od3W8XzcyBuqY7gk9YpFGXx9rTa4T1O1%2f3o9sb%2bSAB55KAQJiC4hBsU5bAi2aVvc2e4bA1CFVoUITHVHaAefnYrFmHXR81IM5M5cpR%2fyYiZimnX%2bbfc2Lxk%2f8XADl5LwzH3Rd6WjRrlf1jk%3d"
+  },
 ];
 
 
@@ -122,6 +220,7 @@ const webProgrammingMetadata = {
     cir: 'Web програмирање',
     lat: 'Web programiranje'
   },
+  url: "localhost:1233",
   category: 1,
 }
 
