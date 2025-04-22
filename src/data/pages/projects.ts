@@ -212,6 +212,20 @@ const graphicsProjects: Project[] = [
     backgroundImage: '/autocad/guitar.png',
     url: "https://sharecad.org/Viewer/Shared?file=EAAAAOouym7jr5jwys1X6MSF%2bRL1bIkw6cjpecbn5ZOVRm3hRcGl4OB1pJvTyfOOrQq503%2bvzax8Od3W8XzcyBuqY7gk9YpFGXx9rTa4T1O1%2f3o9sb%2bSAB55KAQJiC4hBsU5bAi2aVvc2e4bA1CFVoUITHVHaAefnYrFmHXR81IM5M5cpR%2fyYiZimnX%2bbfc2Lxk%2f8XADl5LwzH3Rd6WjRrlf1jk%3d"
   },
+  {
+    ...graphicsMetadata,
+    title: {
+      cir: 'Вентилатор',
+      lat: 'Ventilator'
+    },
+    author: {
+      cir: 'Лазаревић Немања',
+      lat: 'Lazarević Nemanja'
+    },
+    technologies: 'AutoCAD',
+    backgroundImage: '/autocad/fan.png',
+    url: "https://sharecad.org/Viewer/Shared?file=EAAAAH7m7EOf4qGbiiAJKeCrA9GXlfHb%2fKFpUWf%2bD9aXfA49kv2ZgKm6mmnwgaOPNI8HSYJnL5N23hSLkY5vc1ypre8Px8a8CxlD6FJOwByU3nZvzGyY5hoJyVaSfvbgGJKFqVJQy%2fcsYk5KaAyrvA0ExXlwhVWPLLUP7P65V821hT2uXEUePuNyGkMmuklGQqfSoU9oBArcR946CNhkjlSjSoY%3d"
+  },
 ];
 
 
