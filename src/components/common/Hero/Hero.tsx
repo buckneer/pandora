@@ -2,11 +2,10 @@ import React from "react"
 import { Hero as HeroInterface } from "../../../types/data.types"
 // @ts-ignore
 import { useWidth } from "../../../hooks/useWidth"
-import { Link } from "react-router-dom"
 import TranslatedText from "../TranslatedText/TranslatedText"
 import { getTranslatedString } from "../../../utils/utils"
 import { useLanguage } from "../../../context/LanguageContext"
-import { RiArrowRightBoxFill, RiArrowRightLine } from "@remixicon/react"
+import { RiArrowRightLine } from "@remixicon/react"
 
 const Hero: React.FC<HeroInterface> = (props) => {
   const { backgroundImage, mobileImage, title, subtitle, buttonText, buttonUrl } = props

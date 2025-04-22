@@ -1,4 +1,4 @@
-import { Image, Project, ProjectCategory, Translatable } from "./types";
+import { Image, Project, Translatable } from "./types";
 import type { RemixiconComponentType } from "@remixicon/react";
 
 

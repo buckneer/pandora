@@ -1,4 +1,4 @@
-import { Hero, UniversityPage } from "../../types/data.types"
+import { UniversityPage } from "../../types/data.types"
 
 const university: UniversityPage = {
   hero: {
