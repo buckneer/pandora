@@ -17,6 +17,7 @@
     "firebase": "^11.6.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-flip-toolkit": "^7.2.4",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^7.5.1",
     "tailwindcss": "^4.1.4",
