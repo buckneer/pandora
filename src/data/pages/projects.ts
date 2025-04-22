@@ -243,15 +243,44 @@ const webProgrammingProjects: Project[] = [
   {
     ...webProgrammingMetadata,
     title: {
-      cir: 'Брод',
-      lat: 'Brod'
+      cir: 'BeastieOffice',
+      lat: 'BeastieOffice'
     },
     author: {
-      cir: 'Васић Николија',
-      lat: 'Vasić Nikolija'
+      cir: 'Мифтари Симел',
+      lat: 'Miftari Simel'
     },
-    technologies: 'Angular',
-    backgroundImage: '/photoshop/brod.jpg'
+    technologies: 'React',
+    backgroundImage: '/websites/beastieoffice.png',
+    url: "https://beastieoffice.com/"
+  },
+  {
+    ...webProgrammingMetadata,
+    title: {
+      cir: 'BeastieBurgers',
+      lat: 'BeastieBurgers'
+    },
+    author: {
+      cir: 'Мифтари Симел',
+      lat: 'Miftari Simel'
+    },
+    technologies: 'React',
+    backgroundImage: '/websites/beastie.png',
+    url: "https://beastie.be/"
+  },
+  {
+    ...webProgrammingMetadata,
+    title: {
+      cir: 'Aermist',
+      lat: 'Aermist'
+    },
+    author: {
+      cir: 'Исаиловић Јован',
+      lat: 'Isailović Jovan'
+    },
+    technologies: 'React',
+    backgroundImage: '/websites/aermist.png',
+    url: "https://aermist.com/"
   },
 ];
 
